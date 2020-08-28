@@ -8,5 +8,7 @@
           
          - name: Deploying the containers
            shell: docker-compose -f /example-voting-app up
-
+           args: 
+               chdir: /example-voting-app
+ 
   become: true
