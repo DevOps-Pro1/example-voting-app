@@ -11,8 +11,9 @@
           cd /example-voting-app
           ls
           pwd
+          service docker start
          register: out
        - debug: var=out.stdout_lines
        - name: docker compose
-         shell: docker-compose up
+         shell: docker-compose -f /example-voting-app/docker-compose.yml up
          become: true
