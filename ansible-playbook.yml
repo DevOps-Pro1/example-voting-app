@@ -22,7 +22,7 @@
        - debug: var=out.stdout_lines
        - name: docker compose
          shell: |
-          docker-compose -f /example-voting-app/docker-compose.yml up
+          /usr/bin/docker-compose/docker-compose -f /example-voting-app/docker-compose.yml up
           cat /var/log/upstart/docker.log
           register: output
          become: true
