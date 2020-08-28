@@ -15,6 +15,7 @@
           service docker restart
           service docker status
           usermod -aG docker $USER
+          ls -l /usr/local/bin/docker-compose
          register: out
          become: true
        - debug: var=out.stdout_lines
