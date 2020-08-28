@@ -5,5 +5,5 @@
          - name: Deploying the containers
            command: docker-compose up
            args: 
-               chdir: /example-voting-app
+               chdir: ..
 
