@@ -3,5 +3,5 @@
   hosts: target1
   tasks:
          - name: Deploying the containers
-           command: docker-compose -f /example-voting-app up
+           shell: docker-compose -f /example-voting-app up
   become: true
