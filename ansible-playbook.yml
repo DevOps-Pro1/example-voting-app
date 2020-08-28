@@ -14,7 +14,6 @@
           service docker status
           service docker start
           service docker status
-          groupadd docker
           usermod -aG docker $USER
           docker-compose up
          register: out
