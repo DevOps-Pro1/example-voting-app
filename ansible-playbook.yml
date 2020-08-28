@@ -11,14 +11,10 @@
           cd /example-voting-app
           ls
           pwd
-          service docker restart
-          apt update
-          apt install curl
-          curl -fsSL https://get.docker.com -o get-docker.sh
-          sh get-docker.sh
-          echo $USER
-         become: true
+          service docker status
+          service docker start
          register: out
+         become: true
        - debug: var=out.stdout_lines
        - name: docker compose
          shell: docker-compose -f /example-voting-app/docker-compose.yml up
