@@ -17,7 +17,7 @@
           usermod -aG docker ${USER}
           ls -la /var/run/docker.sock
           whereis docker-compose
-          chown $USER:$USER /usr/local/bin/docker-compose
+          chown $USER:$USER /usr/bin/docker-compose
          register: out
          become: true
        - debug: var=out.stdout_lines
