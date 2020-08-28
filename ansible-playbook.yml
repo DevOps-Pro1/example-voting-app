@@ -7,7 +7,7 @@
            
            
          - name: Run the script
-           script: /example-voting-app/compose.sh
+           script: example-voting-app/compose.sh
            
            
  
