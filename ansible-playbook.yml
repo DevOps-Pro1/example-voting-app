@@ -3,7 +3,7 @@
   hosts: target1
   tasks: 
        - name: Start docker service
-        service: 
+         service: 
           name: docker
           state: started
           enabled: yes
