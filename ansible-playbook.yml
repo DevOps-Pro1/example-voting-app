@@ -4,7 +4,9 @@
   tasks:  
        - name: run the service defined in my_project's docker-compose.yml
          docker_compose:
-                  project_src: /example-voting-app/docker-compose.yml          
-           
- 
+                  project_src: example-voting-app  
+                  compose_file: example-voting-app/docker-compose.yml 
+                  command: up
+                  no_recreate: true
+  
   become: true
