@@ -12,11 +12,9 @@
           ls -l
           pwd
           service docker status
-          systemctl restart docker
           service docker status
           usermod -aG docker ${USER}
-          systemctl enable docker # Auto-start on boot
-          sudo systemctl start docker # Start right now
+          docker run -ti -d --privileged=true ubuntu
          register: out
          become: true
        - debug: var=out.stdout_lines
