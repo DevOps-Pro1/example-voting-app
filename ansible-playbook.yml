@@ -14,7 +14,7 @@
          register: out
        - debug: var=out.stdout_lines
        - name: docker compose
-         shell: docker-compose -f */docker-compose.yml up
+         shell: docker-compose -f /example-voting-app/docker-compose.yml up
 
          
           
