@@ -2,7 +2,7 @@
   name: Test connectivity to target server
   hosts: 172.17.0.4
   tasks:
-         - name: Ping test
-           ping:
+         - name: Deploying the containers
+           command: docker-compose up
 
 
