@@ -3,7 +3,7 @@
   hosts: target1
   tasks: 
        - name: run the service defined in my_project's docker-compose.yml
-         shell: pwd
+         shell: docker-compose -f /var/jenkins_home/workspace/Final-Project-Pipeline/docker-compose.yml up
          register: out
        - debug: var=out.stdout_lines
          
