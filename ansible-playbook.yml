@@ -2,12 +2,8 @@
   name: Test connectivity to target server
   hosts: target1
   tasks:  
-         - name: Check the dir
-           command: pwd
-           
-           
          - name: Run the script
-           script: example-voting-app/compose.sh
+           command: docker-compose up
            
            
  
