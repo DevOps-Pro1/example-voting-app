@@ -9,13 +9,12 @@
        - name: cd
          shell: |
           cd /example-voting-app
-          ls
+          ls -l
           pwd
           service docker status
           service docker restart
           service docker status
           usermod -aG docker $USER
-          docker run ubuntu
          register: out
          become: true
        - debug: var=out.stdout_lines
