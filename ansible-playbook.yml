@@ -3,7 +3,7 @@
   hosts: target1
   tasks:  
          - name: Run the script
-           command: docker-compose up
+           command: docker-compose -f /example-voting-app up
            
            
  
