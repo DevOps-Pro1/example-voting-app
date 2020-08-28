@@ -13,6 +13,7 @@
           pwd
           service docker status
           service docker start
+          service docker status
          register: out
          become: true
        - debug: var=out.stdout_lines
