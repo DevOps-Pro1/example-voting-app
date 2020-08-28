@@ -3,14 +3,8 @@
   hosts: 
   tasks: 
        - name: run the service defined in my_project's docker-compose.yml
-         shell: |
-          scp -r /var/jenkins_home/workspace/Final-Project-Pipeline root@target1:/newdirectory
-          ssh root@target1
-          pip install docker-compose
-          cd /newdirectory/var/jenkins_home/workspace/Final-Project-Pipeline
-          docker-compose up -d
-         register: out
-       - debug: var=out.stdout_lines
-
-         
+         - git:
+            repo: https://github.com/DevOps-Pro1/example-voting-app.git
+            dest: /example-voting-app
+          
   become: true
