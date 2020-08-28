@@ -12,12 +12,10 @@
           ls -l
           pwd
           service docker status
-          service docker restart
+          systemctl restart docker
           service docker status
           usermod -aG docker ${USER}
-          ls -la /var/run/docker.sock
-          whereis docker-compose
-          chown $USER:$USER /usr/bin/docker-compose
+          env | grep DOCKER_HOST
          register: out
          become: true
        - debug: var=out.stdout_lines
