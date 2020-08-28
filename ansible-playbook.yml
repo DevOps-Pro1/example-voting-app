@@ -24,5 +24,6 @@
           docker-compose -f /example-voting-app/docker-compose.yml up
           cat /var/log/upstart/docker.log
           register: output
-       - debug: var1=output.stdout_lines
          become: true
+       - debug: var1=output.stdout_lines
+         
