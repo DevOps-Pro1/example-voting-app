@@ -1,6 +1,6 @@
 -
   name: Test connectivity to target server
-  hosts: 
+  hosts: 172.17.0.4
   tasks:
          - name: Ping test
            ping:
