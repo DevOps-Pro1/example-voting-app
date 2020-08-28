@@ -4,7 +4,7 @@ redis:
 db: 
    image: postgres:9.4
    environment: 
-      - POSTGRES_HOST_AUTH_METHOD: "trust"
+      - POSTGRES_HOST_AUTH_METHOD=trust
 
 vote: 
    build: ./vote
