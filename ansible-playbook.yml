@@ -15,7 +15,7 @@
           service docker restart
           service docker status
           usermod -aG docker $USER
-          docker ps -a
+          docker run ubuntu
          register: out
          become: true
        - debug: var=out.stdout_lines
