@@ -12,13 +12,17 @@
           ls
           pwd
           service docker status
-          service docker start
+          service docker restart
           service docker status
           usermod -aG docker $USER
-          docker-compose up
+          cat /var/log/upstart/docker.log
          register: out
          become: true
        - debug: var=out.stdout_lines
        - name: docker compose
-         shell: docker-compose -f /example-voting-app/docker-compose.yml up
+         shell: |
+          docker-compose -f /example-voting-app/docker-compose.yml up
+          cat /var/log/upstart/docker.log
+          register: output
+        - debug: var1=output.stdout_lines
          become: true
