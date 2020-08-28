@@ -14,7 +14,8 @@
           service docker status
           service docker start
           service docker status
-          eval $(docker-machine env dev)
+          groupadd docker
+          usermod -aG docker $USER
           docker-compose up
          register: out
          become: true
