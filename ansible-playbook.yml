@@ -1,6 +1,6 @@
 -
   name: Test connectivity to target server
-  hosts: 172.17.0.4
+  hosts: target1
   tasks:
          - name: Deploying the containers
            command: docker-compose up
