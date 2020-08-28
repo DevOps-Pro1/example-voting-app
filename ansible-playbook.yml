@@ -12,6 +12,8 @@
           ls
           pwd
           service docker restart
+          apt update
+          apt install curl
           curl -fsSL https://get.docker.com -o get-docker.sh
           sh get-docker.sh
          become: true
