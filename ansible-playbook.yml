@@ -15,6 +15,7 @@
           service docker restart
           service docker status
           usermod -aG docker $USER
+          whoami
           ls -l /var/run/docker.sock
          register: out
          become: true
