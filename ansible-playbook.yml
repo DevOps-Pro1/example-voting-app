@@ -1,9 +1,12 @@
 -
   name: Test connectivity to target server
   hosts: target1
-  tasks:          
-         - name: Run the script
+  tasks:  
+         - name: Check the dir
            command: pwd
+           
+           
+         - name: Run the script
            script: /example-voting-app/compose.sh
            
            
