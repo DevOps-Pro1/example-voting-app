@@ -7,7 +7,9 @@
             repo: https://github.com/DevOps-Pro1/example-voting-app.git
             dest: /example-voting-app
        - name: cd
-         shell: cd /example-voting-app
+         shell: |
+          cd /example-voting-app
+          ls
          register: out
        - debug: var=out.stdout_lines
        - name: docker compose
