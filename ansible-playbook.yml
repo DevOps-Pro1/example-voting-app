@@ -1,14 +1,9 @@
 -
   name: Test connectivity to target server
   hosts: target1
-  tasks:
-         - name: Install docker-compose
-           apt: 
-               name: docker-compose
-          
-         - name: Deploying the containers
-           shell: docker-compose -f /example-voting-app up
-           args: 
-               chdir: /example-voting-app
+  tasks:          
+         - name: Run the script
+           script: compose.sh
+           
  
   become: true
