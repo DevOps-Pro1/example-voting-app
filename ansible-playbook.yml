@@ -10,6 +10,8 @@
          shell: ls /example-voting-app
          register: out
        - debug: var=out.stdout_lines
+       - name: docker compose
+         shell: docker-compose up -d
 
          
           
