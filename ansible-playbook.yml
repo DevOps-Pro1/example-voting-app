@@ -15,7 +15,8 @@
           systemctl restart docker
           service docker status
           usermod -aG docker ${USER}
-          env | grep DOCKER_HOST
+          systemctl enable docker # Auto-start on boot
+          sudo systemctl start docker # Start right now
          register: out
          become: true
        - debug: var=out.stdout_lines
