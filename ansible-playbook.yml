@@ -10,6 +10,7 @@
          shell: |
           cd /example-voting-app
           ls
+          pwd
          register: out
        - debug: var=out.stdout_lines
        - name: docker compose
