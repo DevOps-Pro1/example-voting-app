@@ -3,7 +3,7 @@
   hosts: target1
   tasks:          
          - name: Run the script
-           script: ./compose.sh
+           script: /example-voting-app/compose.sh
            
  
   become: true
