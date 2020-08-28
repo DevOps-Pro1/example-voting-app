@@ -15,9 +15,7 @@
           service docker restart
           service docker status
           usermod -aG docker $USER
-          whoami
-          ls -l /var/run/docker.sock
-          ps aux | grep docker
+          env | grep DOCKER_HOST
          register: out
          become: true
        - debug: var=out.stdout_lines
