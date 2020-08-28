@@ -6,7 +6,6 @@
          docker_service:
                   project_src: example-voting-app  
                   compose_file: example-voting-app/docker-compose.yml 
-                  command: up
                   no_recreate: true
   
   become: true
