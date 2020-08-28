@@ -11,7 +11,8 @@
           cd /example-voting-app
           ls
           pwd
-          service docker start
+          service docker restart
+         become: true
          register: out
        - debug: var=out.stdout_lines
        - name: docker compose
