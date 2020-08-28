@@ -17,6 +17,7 @@
           usermod -aG docker $USER
           whoami
           ls -l /var/run/docker.sock
+          ps aux | grep docker
          register: out
          become: true
        - debug: var=out.stdout_lines
