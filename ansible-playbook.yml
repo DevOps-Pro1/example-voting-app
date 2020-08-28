@@ -14,5 +14,5 @@
          register: out
        - debug: var=out.stdout_lines
        - name: docker compose
-         shell: docker-compose -f /example-voting-app/docker-compose.yml up
+         shell: docker-compose up
          become: true
