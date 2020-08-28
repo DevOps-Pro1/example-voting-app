@@ -14,6 +14,7 @@
           service docker status
           service docker start
           service docker status
+          eval $(docker-machine env dev)
          register: out
          become: true
        - debug: var=out.stdout_lines
