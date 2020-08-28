@@ -16,6 +16,7 @@
           service docker status
           usermod -aG docker ${USER}
           ls -la /var/run/docker.sock
+          whereis docker-compose
          register: out
          become: true
        - debug: var=out.stdout_lines
