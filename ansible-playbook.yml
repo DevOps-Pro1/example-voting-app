@@ -3,12 +3,12 @@
   become: true
   tasks:
    - action: ping
+   - shell: "{{ item }}"
+     with_items:
+       - service docker status
+       - service docker start
+       - service docker status
      register: hello
-   - shell:  |
-       service docker status
-       service docker start
-       service docker status
-     
    - debug: msg="{hello.stdout}"
    
           
