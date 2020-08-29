@@ -38,6 +38,8 @@
     - name: check status
       shell: |
        service docker status
+       service docker restart
+       service docker status
        docker --version
        ls /var/run/docker.sock -ls
       register: result
