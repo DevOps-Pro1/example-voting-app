@@ -39,9 +39,11 @@
       shell: |
        service docker restart
        service docker status
+       cat /etc/systemd/system/docker.service
       register: result
     - debug:
         var: result
+        
     - name: Test Docker with hello world example
       shell: "docker run hello-world"
       become: true
