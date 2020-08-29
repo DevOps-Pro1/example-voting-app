@@ -8,8 +8,12 @@
        state: started
      become: true
      register: result
+   - name: docker ps
+     shell: docker ps
+     register: output
    - debug: 
-      var: result
+      - var: result
+      - var: output
    
           
          
