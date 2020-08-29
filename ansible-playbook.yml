@@ -44,6 +44,7 @@
         var: result
     - name: Test Docker with hello world example
       shell: "docker run hello-world"
+      become: true
       register: hello_world_output
 
     - name: Show output of hello word example
