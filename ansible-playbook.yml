@@ -8,7 +8,7 @@
        state: started
      become: true
    - name: check docker status 
-     shell: docker ps
+     shell: ps aux | grep docker
    - debug: msg="{hello.stdout}"
    
           
