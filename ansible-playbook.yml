@@ -74,11 +74,4 @@
       async: 1
       poll: 0
       
-    - name: Test Docker with hello world example
-      shell: "docker run hello-world"
-      become: true
-      register: hello_world_output
-
-    - name: Show output of hello word example
-      debug:
-        msg: "Container Output: {{hello_world_output.stdout}}"
+    
