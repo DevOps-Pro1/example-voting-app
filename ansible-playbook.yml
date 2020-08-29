@@ -2,7 +2,6 @@
   hosts: all
   become: true
   tasks:
-   - action: ping
    - name: Ensure docker deamon is running
      service:
        name: docker
