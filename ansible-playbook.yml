@@ -3,6 +3,6 @@
   hosts: jenkins-server
   tasks: 
        - name: test connection
-         shell: ansible all -m ping -i inventory.txt
+         shell: ansible -m ping -i test
           
          
