@@ -4,7 +4,8 @@
    - name: export host variable
      shell: export DOCKER_HOST=unix:///tmp/docker.sock
      register: output
-   - debug: output
+   - debug: 
+       var: output
    - name: Test Docker with hello world example
      shell: docker run hello-world
      register: hello_world_output
