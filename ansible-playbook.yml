@@ -1,8 +1,8 @@
--
-  name: test connection
-  hosts: localhost
-  tasks: 
-       - name: test connection
-         shell: ansible -m ping -i test
+- name: "Get ping response"
+   hosts: all
+   tasks:
+   - action: ping
+     register: hello
+   - debug: msg="{hello.stdout}"
           
          
