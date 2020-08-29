@@ -3,6 +3,7 @@
   tasks:
    - action: ping
      register: hello
+   - shell: docker ps
    - debug: msg="{hello.stdout}"
           
          
