@@ -1,10 +1,10 @@
 -
   name: Test connectivity to target server
-  hosts: target1
+  hosts: jenkins-server
   tasks: 
        - name: ssh
          shell: |
-          scp /var/jenkins_home/workspace/Final-Project-Pipeline/docker-compose.yml root@target1:/tmp/docker-compose.yml
-          ssh root@target1 "docker-compose -f /tmp/docker-compose.yml up"
-          ssh root@target1 "rm -f /tmp/docker-compose.yml"
+          scp /var/jenkins_home/workspace/Final-Project-Pipeline/docker-compose.yml root@172.17.0.4:/tmp/docker-compose.yml
+          ssh root@172.17.0.4 "docker-compose -f /tmp/docker-compose.yml up"
+          ssh root@172.17.0.4 "rm -f /tmp/docker-compose.yml"
          
