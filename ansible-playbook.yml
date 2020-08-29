@@ -1,8 +1,8 @@
-- name: Install Docker
+- name: Deploy the containers
   hosts: localhost
   tasks:     
       - name: Run the script 
-        script: build.sh
+        shell: docker-compose up
 
       
     
