@@ -12,6 +12,8 @@
     USER: "root"
 
   tasks:
+  -name: install python-apt
+   shell: apt-get install -y python-apt
   - name: Update apt packages
     apt:
       update_cache: true
