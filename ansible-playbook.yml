@@ -13,7 +13,9 @@
 
   tasks:
     - name: install python-apt
-      shell: apt-get install -y python-apt
+      shell: |
+       apt-get install -y python-apt
+       apt-get install -y aptitude.
     - name: Update apt packages
       apt:
         update_cache: true
