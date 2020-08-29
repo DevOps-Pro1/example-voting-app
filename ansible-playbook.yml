@@ -15,6 +15,7 @@
   - name: Update apt packages
     apt:
       update_cache: "yes"
+      force_apt_get: true
 
   - name: Install packages needed for Docker
     apt:
