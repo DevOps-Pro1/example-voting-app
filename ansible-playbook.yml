@@ -10,7 +10,8 @@
    - name: check docker status 
      shell: ps aux | grep docker
      register: hello
-   - debug: var: result
+   - debug: 
+      var: result
    
           
          
