@@ -6,6 +6,7 @@
    - shell:  |
        service docker status
        service docker start
+       service docker status
    - become: true
    - debug: msg="{hello.stdout}"
    
