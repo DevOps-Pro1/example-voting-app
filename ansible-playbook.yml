@@ -1,16 +1,8 @@
 - name: Install Docker
-  hosts: target1
-  tasks:
-   - name: check version
-     shell: docker --version
-   - name: Test Docker with hello world example
-     shell: docker run hello-world
-     register: hello_world_output
-     become: true
-
-   - name: Show output of hello word example
-     debug:
-       msg: "Container Output: {{hello_world_output.stdout}}"
+  hosts: localhost
+  tasks:     
+      - name: Run the script 
+        copy: sh build.sh
 
       
     
