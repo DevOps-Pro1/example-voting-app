@@ -1,5 +1,5 @@
 [test]
-target1 ansible_host=172.17.0.4 ansible_user=root ansible_ssh_pass=Passw0rd ansible_python_interpreter=/usr/bin/python3
+target1 ansible_host=172.17.0.4 ansible_user=root ansible_ssh_pass=Passw0rd 
 
 [prod]
 aws ansible_host=52.91.128.157 ansible_user=ec2-user 
