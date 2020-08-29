@@ -37,9 +37,9 @@
         state: present
     - name: check status
       shell: |
-       service docker restart
        service docker status
-       cat /etc/systemd/system/docker.service
+       docker --version
+       ls /var/run/docker.sock -ls
       register: result
     - debug:
         var: result
