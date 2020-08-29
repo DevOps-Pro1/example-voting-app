@@ -4,6 +4,8 @@
    - action: ping
      register: hello
    - shell: docker ps
+     become: true
    - debug: msg="{hello.stdout}"
+   
           
          
