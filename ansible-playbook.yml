@@ -3,11 +3,10 @@
   become: true
   tasks:
    - action: ping
-   - shell: "{{ item }}"
-     with_items:
-       - service docker status
-       - service docker start
-       - service docker status
+   - name: Ensure docker deamon is running
+     service:
+       name: docker
+       state: started
      register: hello
    - debug: msg="{hello.stdout}"
    
