@@ -38,7 +38,7 @@
     - name: check status
       shell: |
        service docker restart
-       sudo service docker status
+       service docker status
       register: result
     - debug:
         var: result
