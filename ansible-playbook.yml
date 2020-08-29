@@ -1,5 +1,5 @@
 - name: Install Docker
-  hosts: remote
+  hosts: target1
   tasks:
    - name: Test Docker with hello world example
      shell: docker run hello-world
