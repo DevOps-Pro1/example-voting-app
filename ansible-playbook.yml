@@ -6,6 +6,7 @@
      service:
        name: docker
        state: started
+     become: true
      register: hello
    - debug: msg="{hello.stdout}"
    
