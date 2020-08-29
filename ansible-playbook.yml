@@ -1,6 +1,6 @@
 -
   name: test connection
-  hosts: jenkins-server
+  hosts: localhost
   tasks: 
        - name: test connection
          shell: ansible -m ping -i test
