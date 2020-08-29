@@ -1,6 +1,6 @@
 -
   name: Test connectivity to target server
-  hosts: test
+  hosts: target1
   tasks: 
        - name: ssh
          shell: |
