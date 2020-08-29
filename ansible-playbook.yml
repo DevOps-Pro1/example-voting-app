@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:     
       - name: Run the script 
-        shell: docker-compose up
+        shell: docker-compose up --build
 
       
     
