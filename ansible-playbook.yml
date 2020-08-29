@@ -12,7 +12,7 @@
      shell: docker ps
      register: output
    - debug: 
-      - var: output
+      var: output
    
           
          
