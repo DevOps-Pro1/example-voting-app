@@ -12,15 +12,6 @@
     USER: "root"
 
   tasks:
-    - name: install python-apt
-      shell: |
-       apt-get install -y python-apt
-       apt-get install -y aptitude.
-    - name: Update apt packages
-      apt:
-        update_cache: true
-        force_apt_get: true
-
     - name: Install packages needed for Docker
       apt:
         name: "{{ DOCKER_PACKAGES }}"
