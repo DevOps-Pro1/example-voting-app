@@ -14,13 +14,14 @@
   tasks:
   - name: Update apt packages
     apt:
-      update_cache: "yes"
+      update_cache: true
       force_apt_get: true
 
   - name: Install packages needed for Docker
     apt:
       name: "{{ DOCKER_PACKAGES }}"
       state: present
+      force_apt_get: "yes"
 
   - name: Add Docker GPG apt Key
     apt_key:
@@ -39,11 +40,13 @@
   - name: Update apt packages
     apt:
       update_cache: "yes"
+      force_apt_get: "yes"
 
   - name: Install Docker
     apt:
       name: "docker-ce"
       state: present
+      force_apt_get: "yes"
 
   - name: Test Docker with hello world example
     shell: "docker run hello-world"
