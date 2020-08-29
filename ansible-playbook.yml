@@ -9,7 +9,7 @@
      become: true
    - name: check docker status 
      shell: ps aux | grep docker
-     register: hello
+     register: result
    - debug: 
       var: result
    
