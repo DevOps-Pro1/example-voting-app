@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:     
       - name: Run the script 
-        shell: sh build.sh
+        script: build.sh
 
       
     
